@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from "react-redux";
+import { addGlobal } from "./redux/reducers/cryptoReducer";
+import LeftBoard from "./components/LeftBoard";
+import MainBoard from "./components/MainBoard";
+import RightBoard from "./components/RightBoard";
+import "./stylesheets/App.css";
 
-function App() {
+export default function App() {
+
+  const state = useSelector(state => state);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    (async () => {
+      const response = await fetch('https://api.coingecko.com/api/v3/global');
+      const data = await response.json()
+
+      dispatch(addGlobal(data.data))
+    })();
+  }, [])
+
+  console.log(state)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div className="App">
+     <LeftBoard />
+     <MainBoard />
+     <RightBoard />
+   </div>
   );
 }
-
-export default App;
