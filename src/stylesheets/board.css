@@ -1,14 +1,71 @@
+/* VARIABLES can be found in App.css */
+
 /* LEFT PANEL MENU STYLE */
 .left-board {
   flex: 2;
   height: 100vh;
-  border-right: 1px solid rgba(200, 200, 200, 1);
+  border-right: 1px solid var(--global-border);
+}
+
+.left-board > h1{
+  color: var(--link-color);
+  font-size: 28px;
+  font-weight: 500;
+  margin: 20px;
+}
+
+.left-board > h2{
+  font-weight: 300;
+  font-size: 14px;
+  margin: 30px 20px 20px 20px;
+  color: var(--second-color);
+}
+
+.list-menu{
+  margin: 15px;
+  border-bottom: 1px solid var(--global-border);
 }
 
 .list-menu > li{
   list-style: none;
-  margin: 60px;
+  margin: 5px;
+  padding: 15px;
+  font-size: 16px;
   cursor: pointer;
+}
+
+.other-menu > li{
+  list-style: none;
+  margin: 10px 25px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+:not(.active){
+  color: var(--second-color);
+}
+
+.list-item:hover{
+  border-radius: 8px;
+  background-color: var(--link-background);
+}
+
+.active-item{
+  border-radius: 8px;
+  font-weight: 500;
+  background-color: var(--link-background);
+  color: var(--link-color);
+}
+
+.list-item > i{
+  margin-right: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.active-item > i{
+  margin-right: 20px;
+  color: var(--link-color);
 }
 
 /* MAIN PANEL MENU STYLE */
@@ -23,4 +80,65 @@
 .right-board{
   flex: 3;
   height: 100vh;
+}
+
+.global-status{
+  position: relative;
+  width: 90%;
+  height: 25%;
+  border: 1px solid var(--global-border);
+  border-radius: 8px;
+  margin: 20px auto;
+  padding: 6px 30px;
+}
+
+.global-status > h1:not(.sub-border-element) {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--global-color);
+}
+
+.global-status-span {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--link-color);
+}
+
+.border-element{
+  margin: 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--global-border);
+}
+
+.sub-border-element{
+  font-size: 16px;
+  color: var(--global-color);
+  font-weight: 300;
+}
+
+.sub-border-element > span{
+  color: var(--link-color);
+  font-size: 16px;
+  padding-left: 20px;
+  font-weight: 400;
+}
+
+.sub-border-element > i{
+  margin-right: 6px;
+  color: var(--positive-color);
+}
+
+.global-percent-market{
+  border: 1px solid var(--global-border);
+  border-radius: 8px;
+  width: 90%;
+  height: 65%;
+  margin: 20px auto;
+}
+
+.global-percent-title{
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--global-color);
+  margin: 10px 30px;
 }

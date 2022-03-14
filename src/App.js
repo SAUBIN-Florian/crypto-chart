@@ -14,13 +14,11 @@ export default function App() {
   useEffect(() => {
     (async () => {
       const response = await fetch('https://api.coingecko.com/api/v3/global');
-      const data = await response.json()
+      const data = await response.json();
 
-      dispatch(addGlobal(data.data))
+      dispatch(addGlobal(data.data));
     })();
   }, [])
-
-  console.log(state)
 
   return (
    <div className="App">

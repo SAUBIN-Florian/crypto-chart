@@ -1,4 +1,5 @@
 /* GLOBAL & RESET */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&display=swap');
 
 *, *::before, *::after{
   margin: 0;
@@ -6,7 +7,27 @@
   box-sizing: border-box;
 }
 
+:root{
+  font-family: "Fredoka", sans-serif;
+  --global-border: #d7e4ee;
+  --global-color: #383874;
+  --second-color: #adaec2;
+  --third-color: #bebfcf;
+  --link-color: #8676ff;
+  --link-background: #f8f9fb;
+  --positive-color: #21cc9e;
+  --negative-color: #ff708b;
+}
+
+::selection{
+  color: var(--link-background);
+  background: var(--link-color);
+}
+
 .App{
   display: flex;
   justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
