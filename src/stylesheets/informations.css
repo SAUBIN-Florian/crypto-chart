@@ -1,0 +1,59 @@
+.informations{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.info-group-1{
+  display: flex;
+  flex-flow: column;
+  width: 95%;
+  margin: 20px auto 0;
+}
+
+.info-group-1-title{
+  font-size: 50px;
+  color: var(--global-color);
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.info-group-1-para{
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  color: var(--second-color);
+}
+
+.info-group-2{
+  position: absolute;
+  left: 20px;
+  top: 35%;
+  width: 100%;
+}
+
+.info-arrow-svg{
+  width: 100px;
+  height: 100px;
+}
+
+.info-call-to-action{
+  margin-left: 20px;
+  font-size: 16px;
+  color: var(--global-color);
+  font-weight: 300;
+}
+
+.call-to-action-span{
+  color: var(--link-color);
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.info-crypto-svg{
+  position: absolute;
+  bottom: 15%;
+  right: 7%;
+  transform: scale(1.5);
+  opacity: 0.4;
+}
