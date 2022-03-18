@@ -94,14 +94,14 @@
 
 .global-status > h1:not(.sub-border-element) {
   font-size: 18px;
-  font-weight: 500;
-  color: var(--global-color);
+  font-weight: 300;
+  color: var(--second-color);
 }
 
 .global-status-span {
   font-size: 28px;
   font-weight: 500;
-  color: var(--link-color);
+  color: var(--global-color);
 }
 
 .border-element{
@@ -112,12 +112,12 @@
 
 .sub-border-element{
   font-size: 16px;
-  color: var(--global-color);
+  color: var(--third-color);
   font-weight: 300;
 }
 
 .sub-border-element > span{
-  color: var(--link-color);
+  color: var(--global-color);
   font-size: 16px;
   padding-left: 20px;
   font-weight: 400;

@@ -1,9 +1,24 @@
 import React from 'react';
 import { ReactComponent as CryptoSvg } from '../assets/crypto.svg';
 import { ReactComponent as ArrowSvg } from '../assets/arrow.svg';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { addFirstHundred } from '../redux/reducers/cryptoReducer';
 import "../stylesheets/informations.css";
 
 export default function Informations() {
+
+  const dispatch = useDispatch();
+
+  useEffect(()=>{
+    (async () => {
+      const response = await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false");
+      const data = await response.json();
+
+      dispatch(addFirstHundred(data))
+    })();
+  }, []);
+
   return (
     <div className="informations">
       <div className="info-group-1">

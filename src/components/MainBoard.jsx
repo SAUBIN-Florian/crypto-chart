@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Informations from "./Informations";
+import Dashboard from "./Dashboard";
 import "../stylesheets/board.css";
 
 export default function MainBoard() {
@@ -10,7 +11,7 @@ export default function MainBoard() {
   const switchCaseRenderer = (param) => {
     switch(param){
       case "Dashboard":
-        return <p>Dashboard</p>;
+        return <Dashboard />;
       case "Top 7 Trending":
         return <p>Top 7 Trending</p>;
       case "Exchanges":
