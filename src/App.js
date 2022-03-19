@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addGlobal } from "./redux/reducers/cryptoReducer";
 import LeftBoard from "./components/LeftBoard";
 import MainBoard from "./components/MainBoard";
@@ -8,7 +8,6 @@ import "./stylesheets/App.css";
 
 export default function App() {
 
-  const state = useSelector(state => state);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -18,7 +17,7 @@ export default function App() {
 
       dispatch(addGlobal(data.data));
     })();
-  }, [])
+  }, []);
 
   return (
    <div className="App">

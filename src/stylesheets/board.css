@@ -140,5 +140,10 @@
   font-size: 20px;
   font-weight: 500;
   color: var(--global-color);
-  margin: 10px 30px;
+  margin: 10px;
+  text-align: center;
+}
+
+.doughnut{
+  margin: 10% 5px;
 }

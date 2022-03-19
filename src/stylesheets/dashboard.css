@@ -23,6 +23,7 @@
 }
 
 .dash-chart{
+  position: relative;
   display: flex;
   justify-content: center;
   width: 90%;
@@ -69,4 +70,54 @@
   top: 10px;
   right: 10px;
   font-size: 20px;
+}
+
+.dash-chart-nav{
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  height: 10%;
+  margin: 5px 5px;
+}
+
+.dash-chart-title{
+  font-size: 26px;
+  font-weight: 300;
+  margin-left: 10px;
+  color: var(--global-color);
+}
+
+.chart-nav-btn{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 40%;
+}
+
+.nav-btn{
+  vertical-align: middle;
+  text-align: center;
+  padding: 8px;
+  color: var(--second-color);
+  font-weight: 300;
+}
+
+.nav-btn:hover{
+  background-color: var(--link-background);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.active{
+  background-color: var(--link-background);
+  color: var(--link-color);
+  border-radius: 8px;
+  font-weight: 400;
+}
+
+.bar{
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  margin: 0 auto;
 }
