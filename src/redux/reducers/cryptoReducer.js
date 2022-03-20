@@ -4,7 +4,7 @@ const initialState = {
   global: {},
   firstHundred: [],
   topSeven: [],
-  query: {}
+  query: []
 }
 
 const cryptoSlice = createSlice({
@@ -16,9 +16,15 @@ const cryptoSlice = createSlice({
     },
     addFirstHundred: (state, action) => {
       state.firstHundred = action.payload;
+    },
+    setQuery: (state, action) => {
+      for(let i = 2; i <= 43; i += 6){
+        action.payload[i][0] = new Date(action.payload[i][0]).toLocaleDateString()
+        state.query.push(action.payload[i])
+      }
     }
   }
 })
 
-export const { addGlobal, addFirstHundred } = cryptoSlice.actions;
+export const { addGlobal, addFirstHundred, setQuery } = cryptoSlice.actions;
 export default cryptoSlice.reducer;

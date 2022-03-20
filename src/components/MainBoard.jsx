@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import Informations from "./Informations";
 import Dashboard from "./Dashboard";
+import SearchCrypto from "./SearchCrypto";
 import "../stylesheets/board.css";
 
 export default function MainBoard() {
@@ -19,7 +20,7 @@ export default function MainBoard() {
       case "Markets":
         return <p>Markets</p>;
       case "Search Crypto":
-        return <p>Search Crypto</p>;
+        return <SearchCrypto />;
       default:
         return <Informations />
     }
