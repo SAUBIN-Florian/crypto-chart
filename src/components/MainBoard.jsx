@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import Informations from "./Informations";
 import Dashboard from "./Dashboard";
 import SearchCrypto from "./SearchCrypto";
+import Exchanges from "./Exchanges";
 import "../stylesheets/board.css";
 
 export default function MainBoard() {
@@ -16,7 +17,7 @@ export default function MainBoard() {
       case "Top 7 Trending":
         return <p>Top 7 Trending</p>;
       case "Exchanges":
-        return <p>Exchanges</p>;
+        return <Exchanges />;
       case "Markets":
         return <p>Markets</p>;
       case "Search Crypto":

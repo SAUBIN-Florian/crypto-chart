@@ -9,11 +9,10 @@ Chart.register(LineElement, PointElement, CategoryScale, Tooltip);
 
 export default function SearchCrypto() {
 
-
   const state = useSelector(state => state.crypto.query);
   const dispatch = useDispatch();
   const [input, setInput] = useState("");
-  const [error, setError] = useState("");
+  const [error, setError] = useState(false);
   const [title, setTitle] = useState("");
 
   // SET VARIABLES FOR CHART DATA:
@@ -22,22 +21,26 @@ export default function SearchCrypto() {
   const sevenLow = state[0] ? state.map(arr => arr[3]) : [];
 
   const fetchQuery = async (query) => {
+      setError(false)
       try{
         const response = await fetch(`https://api.coingecko.com/api/v3/coins/${query}/ohlc?vs_currency=usd&days=7`);
-        const data = await response.json();
-
-        setError("");
-        dispatch(setQuery(data));
+        
+        if(response.status === 200) {
+          const data = await response.json();
+        
+          setTitle(query[0].toUpperCase() + query.slice(1));
+          dispatch(setQuery(data));
+        }else{
+          setError(true)
+        }
       }catch(err){
         console.log(err)
-        setError(err.error);
       }
   }
 
   const handleForm = (e) => {
     e.preventDefault();
     fetchQuery(e.target.children[1].value.toLowerCase());
-    if(error !== "") return setTitle(e.target.children[1].value);
     setInput("");
   }
 
@@ -68,7 +71,7 @@ export default function SearchCrypto() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
-        {error !== "" && <p className="error-msg">This crypto-currency doesn't exist yet...</p> }
+        {error && <p className="error-msg">This crypto-currency doesn't exist yet...</p> }
       </form>
       <div className="result-chart">
         <h1 className="result-chart-title">Last 7 Days {title} Price in $</h1>

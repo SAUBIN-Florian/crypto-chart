@@ -1,0 +1,23 @@
+.exchanges{
+  width: 100%;
+  height: 100%;
+  animation: 0.7s ease-in-out test;
+}
+
+@keyframes test {
+  from{
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(-100vh);
+  }
+}
+
+.grid-wrapper{
+  display: grid;
+  width: 95%;
+  height: 93.2%;
+  margin: 20px auto;
+}
