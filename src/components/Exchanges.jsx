@@ -38,7 +38,6 @@ export default function Exchanges() {
 
   return (
     <div className="exchanges">
-      {/* <h1 className="exchanges-title">List of Websites where you can exchange crypto-currencies</h1> */}
       <div className="grid-wrapper">
         {slicedState.map((element, index) => {
           return <div className="grid-item" key={index}>

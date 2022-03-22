@@ -4,6 +4,7 @@ import Informations from "./Informations";
 import Dashboard from "./Dashboard";
 import SearchCrypto from "./SearchCrypto";
 import Exchanges from "./Exchanges";
+import Markets from "./Markets";
 import "../stylesheets/board.css";
 
 export default function MainBoard() {
@@ -19,7 +20,7 @@ export default function MainBoard() {
       case "Exchanges":
         return <Exchanges />;
       case "Markets":
-        return <p>Markets</p>;
+        return <Markets />;
       case "Search Crypto":
         return <SearchCrypto />;
       default:
