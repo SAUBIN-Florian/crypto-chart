@@ -1,23 +1,117 @@
 .exchanges{
+  position: relative;
   width: 100%;
   height: 100%;
-  animation: 0.7s ease-in-out test;
 }
 
-@keyframes test {
-  from{
-    opacity: 0;
-    transform: translateY(100vh);
-  }
-  to{
-    opacity: 1;
-    transform: translateY(-100vh);
-  }
+.exchanges-title{
+  display: flex;
+  justify-content: center;
+  margin: 5px auto 0;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: var(--global-color);
 }
 
 .grid-wrapper{
   display: grid;
-  width: 95%;
-  height: 93.2%;
-  margin: 20px auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
+  grid-auto-rows: repeat(3, 1fr);
+  width: 90%;
+  height: 90%;
+  margin: 5% auto;
+}
+
+.grid-item{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--global-border);
+  border-radius: 8px;
+}
+
+.grid-item-title{
+  margin: 10px 10px;
+  font-size: 1.2em;
+  font-weight: 300;
+  color: var(--global-color);
+}
+
+.grid-item-rank{
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: 300;
+  margin: 5px 10px;
+}
+
+.grid-item-img{
+  margin: 5px 10px;
+}
+
+.grid-item-para{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 5px 10px;
+  line-height: 26px;
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--third-color);
+}
+
+.grid-item-para-span{
+  color: var(--global-color);
+}
+
+.grid-item-para > i{
+  margin-left: 3px;
+  color: #f6bf55;
+}
+
+.grid-item-link{
+  position: absolute;
+  top: 22px;
+  right: 0;
+  margin: 5px 4px;
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 8px;
+  color: var(--global-color);
+}
+
+.grid-item-link:hover{
+  color: var(--link-color);
+  background-color: var(--link-background);
+}
+
+.pagination{
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  list-style: none;
+}
+
+.pagination-btn{
+  font-size: 28px;
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+.pagination-btn:hover{
+  background-color: var(--link-background);
+}
+
+.pagination-btn:active{
+  background-color: var(--link-color);
+}
+
+.pagination-btn > i{
+  color: var(--global-color);
+}
+
+.pagination-btn > i:active{
+  color: white;
 }

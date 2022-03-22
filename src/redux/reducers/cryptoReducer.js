@@ -4,6 +4,7 @@ const initialState = {
   global: {},
   firstHundred: [],
   topSeven: [],
+  exchanges: [],
   query: []
 }
 
@@ -26,9 +27,12 @@ const cryptoSlice = createSlice({
         }
       }
       return;
+    },
+    addExchanges: (state, action) => {
+      state.exchanges = action.payload
     }
   }
 })
 
-export const { addGlobal, addFirstHundred, setQuery } = cryptoSlice.actions;
+export const { addGlobal, addFirstHundred, setQuery, addExchanges } = cryptoSlice.actions;
 export default cryptoSlice.reducer;
