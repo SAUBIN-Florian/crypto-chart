@@ -8,52 +8,117 @@
   display: flex;
   flex-flow: column;
   width: 95%;
+  height: 45%;
   margin: 20px auto 0;
 }
 
 .info-group-1-title{
-  font-size: 50px;
+  font-size: 3em;
   color: var(--global-color);
   font-weight: 400;
   margin-bottom: 30px;
 }
 
 .info-group-1-para{
-  font-size: 18px;
+  font-size: 0.9em;
   font-weight: 300;
   line-height: 30px;
   color: var(--second-color);
 }
 
-.info-group-2{
-  position: absolute;
-  left: 20px;
-  top: 35%;
-  width: 100%;
-}
-
-.info-arrow-svg{
-  width: 100px;
-  height: 100px;
-}
-
-.info-call-to-action{
-  margin-left: 20px;
-  font-size: 16px;
-  color: var(--global-color);
-  font-weight: 300;
-}
-
-.call-to-action-span{
+.span-title{
   color: var(--link-color);
-  font-size: 24px;
+  font-weight: 500;
+}
+
+.info-group-1-call-to-action{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  font-size: 1.1em;
+  color: var(--link-color);
   font-weight: 400;
 }
 
-.info-crypto-svg{
-  position: absolute;
-  bottom: 15%;
-  right: 7%;
-  transform: scale(1.5);
-  opacity: 0.4;
+.info-group-1-call-to-action > i{
+  font-size: 30px;
+  color: var(--link-color);
+  margin-right: 10px;
+  animation: slide-inf 0.7s infinite alternate ease-in-out;
+}
+
+.info-group-2{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: 45%;
+  margin: 0 auto;
+}
+
+.info-group-2 > div{
+  border: 1px solid var(--global-border);
+  border-radius: 8px;
+  width: 40%;
+  height: 60%;
+  padding: 12px;
+  animation: transi 0.7s ease-in-out;
+}
+
+.real-time-card-title{
+  font-weight: 400;
+  color: var(--global-color);
+}
+
+.real-time-card-para{
+  color: var(--second-color);
+  font-weight: 300;
+}
+
+.real-time-card-title > i{
+  color: var(--link-color);
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.visualize-card-title{
+  font-weight: 400;
+  color: var(--global-color);
+}
+
+.visualize-card-para{
+  color: var(--second-color);
+  font-weight: 300;
+}
+
+.visualize-card-title > i{
+  color: var(--link-color);
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.info-group-2 > div > p{
+  margin-top: 30px;
+  line-height: 26px;
+}
+
+@keyframes slide-inf{
+  from{
+    transform: translateX(5px);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+
+@keyframes transi{
+  from{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

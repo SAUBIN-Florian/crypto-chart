@@ -26,6 +26,7 @@
   width: 95%;
   height: 80%;
   margin-left: 5px;
+  table-layout:fixed;
 }
 
 .markets-header{
@@ -47,7 +48,6 @@
 .item-column{
   text-align: center;
   font-weight: 300;
-  /* padding: 15px 0; */
   border-bottom: 1px solid var(--global-border);
 }
 
@@ -107,4 +107,21 @@
 
 .pagination-btn-markets > i:active{
   color: white;
+}
+
+/* KEYFRAMES ANIMATIONS */
+
+[class*="transl-"]{
+  animation: transl 0.6s ease-in-out;
+}
+
+@keyframes transl{
+  0%{
+    opacity: 0;
+    transform: translateX(8px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

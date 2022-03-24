@@ -1,6 +1,4 @@
 import React from 'react';
-import { ReactComponent as CryptoSvg } from '../assets/crypto.svg';
-import { ReactComponent as ArrowSvg } from '../assets/arrow.svg';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { addFirstHundred } from '../redux/reducers/cryptoReducer';
@@ -23,13 +21,32 @@ export default function Informations() {
     <div className="informations">
       <div className="info-group-1">
         <h1 className="info-group-1-title">Welcome on Cryptanalyze.</h1>
-        <p className="info-group-1-para">Here you will find multiple crypto-currencies chart in real time and usefull informations about the crypto's market.</p>
+        <p className="info-group-1-para">
+          Here you will find multiple crypto-currencies chart in real time and usefull informations about the crypto's market.
+          <br />
+          Searching about a specific crypto or for a Top 10 best crypto of the day ? On <span className="span-title">Cryptanalyze.</span> you will find what you want and many more...
+        </p>
+        <h2 className="info-group-1-call-to-action">
+          <i className="fa-solid fa-chevron-left"></i>
+          Navigate throught the left board to start digging
+        </h2>
       </div>
       <div className="info-group-2">
-        <ArrowSvg className="info-arrow-svg" />
-        <h3 className="info-call-to-action">Select a <span className="call-to-action-span">tab</span> to start digging...</h3>
+        <div className="real-time-card">
+          <h3 className="real-time-card-title">
+            <i className="fa-solid fa-server"></i>
+            Real-time Price Data
+          </h3>
+          <p className="real-time-card-para">Large library about crypto (13,000+ coins) and markets (700+) for you to analyze</p>
+        </div>
+        <div className="visualize-card">
+          <h3 className="visualize-card-title">
+            <i className="fa-solid fa-chart-pie"></i>
+            Dynamic Graph & Chart
+          </h3>
+          <p className="visualize-card-para">Neat graphs for a better data analyze approch...</p>
+        </div>
       </div>
-      <CryptoSvg className="info-crypto-svg" />
     </div>
   )
 }

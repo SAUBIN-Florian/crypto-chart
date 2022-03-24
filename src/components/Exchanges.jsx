@@ -40,7 +40,7 @@ export default function Exchanges() {
     <div className="exchanges">
       <div className="grid-wrapper">
         {slicedState.map((element, index) => {
-          return <div className="grid-item" key={index}>
+          return <div className={`grid-item transi-${index + 1}`} key={index}>
             <img className="grid-item-img" src={element.image} alt="crypto-logo" />
             <p className="grid-item-rank">Rank: {element.trust_score_rank}</p>
             <h2 className="grid-item-title">{element.name}</h2>

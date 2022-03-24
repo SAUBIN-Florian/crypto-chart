@@ -47,16 +47,16 @@ export default function Markets() {
       <table className="markets-list">
         <thead className="markets-header">
           <tr>
-            <th className="item-header">Categories</th>
-            <th className="item-header">Best Currencies</th>
+            <th className="item-header">Category</th>
+            <th className="item-header">Top Coins</th>
             <th className="item-header">24h</th>
             <th className="item-header">Market capitalization</th>
-            <th className="item-header">24 hour volume</th>
+            <th className="item-header">24h volume</th>
           </tr>
         </thead>
         <tbody className="markets-item">
           {slicedState.map((item, index) => {
-            return <tr key={index}>
+            return <tr key={index} className={`transl-${index + 1}`}>
               <td className="item-column">{item.name}</td>
               <td className="item-img">
                 <img src={item.top_3_coins[0]} alt="best-crypto" />
