@@ -1,7 +1,7 @@
 {
   "name": "test-chart",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://saubin-florian.github.io",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",
