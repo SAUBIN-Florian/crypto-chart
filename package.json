@@ -2,7 +2,7 @@
   "name": "test-chart",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://SAUBIN-Florian.github.io",
+  "homepage": "https://SAUBIN-Florian.github.io/crypto-chart/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",
     "@testing-library/jest-dom": "^5.16.2",
