@@ -5,6 +5,7 @@ import Dashboard from "./Dashboard";
 import SearchCrypto from "./SearchCrypto";
 import Exchanges from "./Exchanges";
 import Markets from "./Markets";
+import Trending from "./Trending";
 import "../stylesheets/board.css";
 
 export default function MainBoard() {
@@ -16,7 +17,7 @@ export default function MainBoard() {
       case "Dashboard":
         return <Dashboard />;
       case "Top 7 Trending":
-        return <p>Top 7 Trending</p>;
+        return <Trending />;
       case "Exchanges":
         return <Exchanges />;
       case "Markets":

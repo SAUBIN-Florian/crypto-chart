@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   global: {},
   firstHundred: [],
-  topSeven: [],
+  topSeven: {},
   exchanges: [],
   markets: [],
   query: []
@@ -18,6 +18,9 @@ const cryptoSlice = createSlice({
     },
     addFirstHundred: (state, action) => {
       state.firstHundred = action.payload;
+    },
+    addTopSeven: (state, action) => {
+      state.topSeven = action.payload
     },
     setQuery: (state, action) => {
       if(action.payload[0]){
@@ -38,5 +41,5 @@ const cryptoSlice = createSlice({
   }
 })
 
-export const { addGlobal, addFirstHundred, setQuery, addExchanges, addMarkets } = cryptoSlice.actions;
+export const { addGlobal, addFirstHundred, setQuery, addExchanges, addMarkets, addTopSeven } = cryptoSlice.actions;
 export default cryptoSlice.reducer;
