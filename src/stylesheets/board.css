@@ -111,6 +111,7 @@
 }
 
 .sub-border-element{
+  margin-top: 8%;
   font-size: 16px;
   color: var(--third-color);
   font-weight: 300;

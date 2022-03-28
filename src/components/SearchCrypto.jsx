@@ -40,7 +40,7 @@ export default function SearchCrypto() {
 
   const handleForm = (e) => {
     e.preventDefault();
-    fetchQuery(e.target.children[1].value.toLowerCase());
+    fetchQuery(e.target[0].value.toLowerCase());
     setInput("");
   }
 
@@ -63,14 +63,16 @@ export default function SearchCrypto() {
   return (
     <div className="search-crypto">
       <form className="search-form" onSubmit={handleForm}>
-        <i className="fa-solid fa-magnifying-glass"></i>
-        <input 
-          className="search-input" 
-          type="text" 
-          placeholder="Search for a Crypto..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
+        <div className="input-container">
+          <i className="fa-solid fa-magnifying-glass"></i>
+          <input 
+            className="search-input" 
+            type="text" 
+            placeholder="Search for a Crypto..."
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+        </div>
         {error && <p className="error-msg">This crypto-currency doesn't exist yet...</p> }
       </form>
       <div className="result-chart">

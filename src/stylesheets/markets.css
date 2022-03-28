@@ -43,6 +43,7 @@
 
 .item-column{
   text-align: center;
+  color: var(--global-color);
   font-weight: 300;
   border-bottom: 1px solid var(--global-border);
 }
