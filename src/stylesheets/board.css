@@ -106,7 +106,7 @@
 
 .border-element{
   margin: 10px 0;
-  padding-bottom: 10px;
+  padding-bottom: 8%;
   border-bottom: 1px solid var(--global-border);
 }
 
@@ -119,7 +119,7 @@
 .sub-border-element > span{
   color: var(--global-color);
   font-size: 16px;
-  padding-left: 20px;
+  padding-left: 5px;
   font-weight: 400;
 }
 

@@ -61,7 +61,7 @@
   border: 1px solid var(--global-border);
   border-radius: 8px;
   width: 40%;
-  height: auto;
+  height: 60%;
   padding: 12px;
   animation: transi 0.7s ease-in-out;
 }

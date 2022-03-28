@@ -40,7 +40,7 @@ export default function RightBoard() {
       <div className="global-status">
         <h1>Crypto Currencies: <span className="global-status-span">{state.active_cryptocurrencies}</span></h1>
         <h1 className="border-element">Markets: <span className="global-status-span">{state.markets}</span></h1>
-        <h1 className="sub-border-element"><i className="fa-solid fa-scale-unbalanced"></i>Change rate USD: <span>{state.market_cap_change_percentage_24h_usd} %</span></h1>
+        <h1 className="sub-border-element"><i className="fa-solid fa-scale-unbalanced"></i>Change rate USD: <span>{Math.round(state.market_cap_change_percentage_24h_usd * 100) / 100} %</span></h1>
       </div>
       <div className="global-percent-market">
         <h1 className="global-percent-title">Top 10 Market Share in %</h1>
