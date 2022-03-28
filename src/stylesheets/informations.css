@@ -35,7 +35,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
+  margin: 8% auto;
   font-size: 1.1em;
   color: var(--link-color);
   font-weight: 400;
@@ -61,7 +61,7 @@
   border: 1px solid var(--global-border);
   border-radius: 8px;
   width: 40%;
-  height: 60%;
+  height: auto;
   padding: 12px;
   animation: transi 0.7s ease-in-out;
 }
